@@ -1,0 +1,16 @@
+User
+======
+	->Personal Use
+		1. Edit Profile
+		2. Create Posts(Images/Photos)
+		3. Create Discussion Threads
+	
+	
+	->Online Activity
+		1. Upvote/Downvote Posts or Discussions
+		2. Create Comments on Posts or Discussions
+		3. Share Posts or Discussions
+		4. Search Posts or Discussions
+		5. Follow Users
+		6. Report Posts or Discussions or Users
+		7. Create Chat room
