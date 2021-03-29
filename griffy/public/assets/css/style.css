@@ -106,7 +106,10 @@
 /* === Import template variables === */
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
-
+.card
+{
+  margin:10px
+}
 @-moz-keyframes flash {
   0% {
     opacity: 1; }
@@ -20382,7 +20385,10 @@ div.tagsinput {
           width: auto;
           max-width: 100%;
           height: auto;
-          margin: auto; }
+          max-height: 100%;
+          margin-top: -10px; 
+          margin-left: -5px;  
+        }
   .navbar .navbar-menu-wrapper {
     transition: width 0.25s ease;
     -webkit-transition: width 0.25s ease;
@@ -20623,12 +20629,13 @@ div.tagsinput {
 
 /* Sidebar */
 .sidebar {
-  min-height: calc(100vh - 70px);
+  height: 100%;
   background: #191c24;
   font-weight: normal;
   padding: 0;
   width: 244px;
   z-index: 11;
+  overflow:hidden;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;

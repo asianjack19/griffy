@@ -32,7 +32,7 @@
           @include('griffytheme.partials.footer')
           
         </div>
-
+     
       </div>
       
     </div>
