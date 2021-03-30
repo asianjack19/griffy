@@ -11,18 +11,8 @@
 |
 */
 
-
-
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
 
-
-Route::get('/', function () {
-    return view('griffytheme.master');
-});
-
-Route::get('/index', function () {
-    return view('items.index');
-}); 

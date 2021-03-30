@@ -20628,7 +20628,7 @@ div.tagsinput {
   background: #fa424a; }
 
 /* Sidebar */
-.sidebar {
+.sidebar  {
   height: 100%;
   background: #191c24;
   font-weight: normal;
@@ -20676,6 +20676,7 @@ div.tagsinput {
           width: 60px;
           margin: -5px 3px 4px -8px; }
   .sidebar .nav {
+    position: fixed;
     overflow: hidden;
     flex-wrap: nowrap;
     flex-direction: column;

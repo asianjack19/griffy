@@ -121,8 +121,7 @@
         </a>
         <div class="collapse" id="auth">
           <ul class="nav flex-column sub-menu"> 
-            <li class="nav-item"> <a class="nav-link" href="/index">Login</a></li>
-            <li class="nav-item"> <a class="nav-link" href="/index">Register</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/index">Logout</a></li>
           </ul>
         </div>
       </li>

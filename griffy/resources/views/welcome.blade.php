@@ -20,13 +20,12 @@
             }
             img
             {
-                width: 50%;
-    max-width: 100%;
-    height: 50%;
-    margin-top: -9px;
-    margin-left: 16px;
-    vertical-align: middle;
-    object-fit: cover;;
+                width: 72%; /* width of container */
+                max-width: 100%;
+                height: 335px; /* height of container */
+                object-fit: none;
+                object-position: 50%  59%; /* try 20px 10px */ 
+
             }
             .full-height {
                 height: 100vh;
