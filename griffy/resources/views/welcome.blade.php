@@ -20,7 +20,7 @@
             }
             img
             {
-                width: 72%; /* width of container */
+                width: 100%; /* width of container */
                 max-width: 100%;
                 height: 335px; /* height of container */
                 object-fit: none;
