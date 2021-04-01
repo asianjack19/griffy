@@ -11,12 +11,17 @@
 |
 */
 
-Route::get('/', function () {
+use App\Http\Controllers\PostsController;
+
+Route::get('/', function () 
+{
     return view('welcome');
 });
 
-
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+//CreateStory
+Route::get('/story/create', 'PostsController@createStory')->middleware('auth');
+Route::post('/story', 'PostsController@storeStory')->middleware('auth');
+

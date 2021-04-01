@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-      <a class="sidebar-brand brand-logo" href="/index"><img src="assets/images/griffy-logo.svg" alt="logo" /></a>
-      <a class="sidebar-brand brand-logo-mini" href="/index"><img src="assets/images/griffy Icon.ico" alt="logo" /></a>
+      <a class="sidebar-brand brand-logo" href="/index"><img src="{{ asset('assets/images/griffy-logo.svg') }}" alt="logo" /></a>
+      <a class="sidebar-brand brand-logo-mini" href="/index"><img src="{{ asset('assets/images/griffy Icon.ico') }}" alt="logo" /></a>
     </div>
     <ul class="nav">
 
@@ -10,11 +10,11 @@
         <div class="profile-desc">
           <div class="profile-pic">
             <div class="count-indicator">
-              <img class="img-xs rounded-circle " src="assets/images/faces/RealPeople/Rick.jpg" alt="">
+              <img class="img-xs rounded-circle " src="{{ asset('assets/images/faces/RealPeople/Rick.jpg') }}" alt="">
               <span class="count bg-success"></span>
             </div>
             <div class="profile-name">
-              <h5 class="mb-0 font-weight-normal">Rick</h5>
+              <h5 class="mb-0 font-weight-normal">{{ Auth::user()->userName }}</h5>
               <span>BINUS University</span>
             </div>
           </div>

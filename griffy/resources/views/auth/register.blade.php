@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-bottom: 5% !important">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -43,8 +43,10 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
 
                             <div class="col-md-6">
-                                <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender">
-
+                                <select class="form-control @error('gender') is-invalid @enderror" name="gender"  }} id="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                  </select>
                                 @error('gender')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -71,8 +73,11 @@
                             <label for="studyStatus" class="col-md-4 col-form-label text-md-right">{{ __('Study Status') }}</label>
 
                             <div class="col-md-6">
-                                <input id="studyStatus" type="text" class="form-control @error('studyStatus') is-invalid @enderror" name="studyStatus" value="{{ old('studyStatus') }}" required autocomplete="studyStatus">
-
+                                <select id="studyStatus" type="text" class="form-control @error('studyStatus') is-invalid @enderror" name="studyStatus" id="gender">
+                                    <option>Active Student</option>
+                                    <option>Graduated</option>
+                                    <option>Vacuum</option>
+                                  </select>
                                 @error('studyStatus')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -117,5 +122,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection
