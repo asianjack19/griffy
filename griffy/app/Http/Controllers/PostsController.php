@@ -27,4 +27,3 @@ class PostsController extends Controller
         return redirect('/story/create');
     }
 }
-//hey
