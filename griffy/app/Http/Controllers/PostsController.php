@@ -19,11 +19,24 @@ class PostsController extends Controller
     {
         $request->userID = Auth::user()->userID;
         
+        $request->validate([
+            'title' => 'required',
+            'title' => 'required'
+        ]);
+
         $request = DB::table('posts')->insert([
             'title' => $request["title"],
             'body' => $request["body"],
             'userID' => $request->userID
         ]);
-        return redirect('/story/create');
+        return redirect('/story');
+    }
+
+    public function indexStory()
+    {
+        $story = DB::table('posts')->get();
+        // dd($stories);
+        
+        return view('items.posts.story.index', compact('story'));
     }
 }

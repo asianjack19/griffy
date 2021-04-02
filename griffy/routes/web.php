@@ -21,8 +21,9 @@ Route::get('/', function ()
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-//CreateStory
+//Create Story
 Route::get('/story/create', 'PostsController@createStory')->middleware('auth');
 Route::post('/story', 'PostsController@storeStory')->middleware('auth');
 
- 
+//Show Story
+Route::get('/story', 'PostsController@indexStory')->middleware('auth');
