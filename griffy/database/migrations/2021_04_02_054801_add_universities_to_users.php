@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUniversityDetailsTable extends Migration
+class AddUniversitiesToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateUniversityDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('university_details', function (Blueprint $table) {
-            $table->string('email');
-            $table->unsignedBigInteger('universityID');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->unsignedBigInteger('universityID')->nullable();
             $table->foreign('universityID')->references('universityID')->on('universities');
-            $table->float('gpa');
-            $table->string('major');
-            $table->primary(['email']);
-            $table->timestamps();
+        
         });
     }
 
@@ -31,6 +28,10 @@ class CreateUniversityDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('university_details');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->dropForeign(['universityID']);
+            $table->dropColumn(['universityID']);
+        });
     }
 }

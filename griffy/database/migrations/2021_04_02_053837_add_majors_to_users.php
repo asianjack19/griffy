@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddEmailToUsers extends Migration
+class AddMajorsToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,9 @@ class AddEmailToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->string('email');
-            $table->foreign('email')->references('email')->on('university_details');
+            $table->unsignedBigInteger('majorID')->nullable();
+            $table->foreign('majorID')->references('majorID')->on('majors');
+        
         });
     }
 
@@ -29,8 +30,10 @@ class AddEmailToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->dropForeign(['email']);
-            $table->dropColumn(['email']);
+            $table->dropForeign(['majorID']);
+            $table->dropColumn(['majorID']);
+        
         });
     }
 }
+

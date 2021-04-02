@@ -23,6 +23,10 @@ class CreateUsersTable extends Migration
             $table->string('gender');
             $table->date('dob');
             $table->string('studyStatus');
+            $table->string('email');
+            $table->float('gpa')->nullable();
+        
+
             $table->rememberToken();
             $table->timestamps();
         });

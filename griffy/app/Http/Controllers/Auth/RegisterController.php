@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Major;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -56,7 +57,9 @@ class RegisterController extends Controller
             'dob' =>['required','date'],
             'studyStatus' => ['required','string','max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-        ]);
+            // 'majorID'=>['integer'],
+            // 'universityID'=>['integer']
+            ]);
     }
 
     /**
@@ -74,6 +77,8 @@ class RegisterController extends Controller
             'dob'=>$data['dob'],
             'studyStatus'=>$data['studyStatus'],
             'email' => $data['email'],
+            // 'majorID' =>$data['majorID'],
+            // 'universityID' => $data['universityID']
         ]);
     }
 }
