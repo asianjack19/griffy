@@ -28,7 +28,7 @@
         <nav class="navbar navbar-expand-md shadow-sm" style="left: 0 !important">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <a class="sidebar-brand brand-logo" href="/index"><img src=" {{ asset('assets/images/griffy-logo.svg') }}" style="width:12% !important " alt="logo" /></a>
+                    <a class="sidebar-brand brand-logo" href="/"><img src=" {{ asset('assets/images/griffy-logo.svg') }}" style="width:12% !important " alt="logo" /></a>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

@@ -60,11 +60,7 @@
             
           </div>
         </li>
-        <li class="nav-item nav-settings d-none d-lg-block">
-          <a class="nav-link" href="#">
-            <i class="mdi mdi-view-grid"></i>
-          </a>
-        </li>
+        
         <li class="nav-item dropdown border-left">
           <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
             <i class="mdi mdi-email"></i>
@@ -195,8 +191,7 @@
 
               </div>
             </a>
-            <div class="dropdown-divider"></div>
-            <p class="p-3 mb-0 text-center">Advanced settings</p>
+            
           </div>
         </li>
       </ul>
