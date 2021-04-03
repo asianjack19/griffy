@@ -8,15 +8,15 @@
               <h5 class="card-title text-center" style="font-size: 30px">{{$story -> title}}</h5>
               <div class="d-flex align-items-center border-bottom border-success">
                 <img class="img-xs rounded-circle " src="{{ asset('assets/images/faces/RealPeople/Rick.jpg') }}" alt="">
-                <p class="text-center mx-3 my-3" style="color: #007bff;">{{$story->userName}}</p>
+                <h4 class="text-center mx-3 my-4" style="color: #007bff;">{{$story->userName}}</h4>
               </div>
               
               
-              <p class="card-text my-3">{{$story -> body}}</p>
-              <div>
+              <p class="card-text my-5">{{$story -> body}}</p>
+              <div cla>
                 <div class="d-flex justify-content-between">
-                    <button class="btn btn-primary w-2 h-2"><div class="mdi mdi-thumb-up"></div>Like</button>
-                    <div class="d-flex align-items-center align-self-start my-3">
+                    <button class="btn btn-primary w-2 h-2 px-3 py-2"><div class="mdi mdi-thumb-up"></div>Like</button>
+                    <div class="d-flex align-items-center align-self-start my-1">
                       <h3 class="ml-5">{{$story->likeCount}}</h3>
                       <p class="text-success ml-2 mb-0 font-weight-medium">Likes</p>
                     </div>

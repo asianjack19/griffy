@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-      <a class="sidebar-brand brand-logo" href="/index"><img src="{{ asset('assets/images/griffy-logo.svg') }}" alt="logo" /></a>
-      <a class="sidebar-brand brand-logo-mini" href="/index"><img src="{{ asset('assets/images/griffy Icon.ico') }}" alt="logo" /></a>
+      <a class="sidebar-brand brand-logo" href="/home"><img src="{{ asset('assets/images/griffy-logo.svg') }}" alt="logo" /></a>
+      <a class="sidebar-brand brand-logo-mini" href="/home"><img src="{{ asset('assets/images/griffy Icon.ico') }}" alt="logo" /></a>
     </div>
     <ul class="nav">
 
@@ -51,11 +51,11 @@
 
       {{-- POSTS --}}
       <li class="nav-item menu-items">
-        <a class="nav-link" href="/home">
+        <a class="nav-link" href="/story">
           <span class="menu-icon">
             <i class="mdi mdi-panorama-horizontal"></i>
           </span>
-          <span class="menu-title">Explore Highlights</span>
+          <span class="menu-title">Explore Posts</span>
           {{-- <i class="menu-arrow"></i> --}}
         </a>
         {{-- DROPDOWN --}}

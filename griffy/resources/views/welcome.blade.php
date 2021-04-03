@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>griffy</title>
-
+        <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" sizes="64x64" />
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
         <!-- Styles -->
@@ -88,9 +88,7 @@
 
             <div class="content">
                 <div class="m-b-md">
-                    <a href="/index">
-                        <img src="assets/images/griffy.png" alt="">
-                    </a>
+                    <img src="assets/images/griffy.png" alt="">
                 </div>
             </div>
         </div>

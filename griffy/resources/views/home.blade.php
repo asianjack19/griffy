@@ -13,9 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-between">
                         <p class="my-3">You are logged in!</p>
-                        <a class="mx-5 my-2" href="/story">
+                        <a class="mx-5 my-3" href="/story">
                             <button type="button" class="btn btn-dark " style="color: #007bff;" >Let's Go!</button>
                         </a>
                     </div>
