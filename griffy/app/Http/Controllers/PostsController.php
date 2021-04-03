@@ -34,7 +34,12 @@ class PostsController extends Controller
 
     public function indexStory()
     {
-        $story = DB::table('posts')->get();
+        $story = DB::table('posts')
+                ->join('users', 'users.userID','=','posts.userID')
+                ->get();
+        
+        
+
         // dd($stories);
         
         return view('items.posts.story.index', compact('story'));

@@ -15,13 +15,13 @@
       </ul>
       <ul class="navbar-nav navbar-nav-right">
         <li class="nav-item dropdown d-none d-lg-block">
-          <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Create New Post</a>
+          <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false">+ Create New Post</a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
             
             <h6 class="p-3 mb-0">Highlights</h6>
 
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item preview-item">
+            <a class="dropdown-item preview-item" href="/story/create">
               <div class="preview-thumbnail">
                 <div class="preview-icon bg-dark rounded-circle">
                   <i class="mdi mdi-book text-success"></i>
@@ -175,14 +175,24 @@
               </div>
             </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item preview-item">
+            <a class="dropdown-item preview-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
               <div class="preview-thumbnail">
                 <div class="preview-icon bg-dark rounded-circle">
                   <i class="mdi mdi-logout text-danger"></i>
                 </div>
               </div>
               <div class="preview-item-content">
-                <p class="preview-subject mb-1">Log out</p>
+              
+                    <p>{{ __('Logout') }}</p>                    
+              
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+               
+
               </div>
             </a>
             <div class="dropdown-divider"></div>

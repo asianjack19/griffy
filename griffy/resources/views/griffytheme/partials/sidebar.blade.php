@@ -18,9 +18,9 @@
               <span>BINUS University</span>
             </div>
           </div>
-          <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+          <a href="/home" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
           <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
-            <a href="#" class="dropdown-item preview-item">
+            <a href="" class="dropdown-item preview-item">
               <div class="preview-thumbnail">
                 <div class="preview-icon bg-dark rounded-circle">
                   <i class="mdi mdi-settings text-primary"></i>
@@ -30,28 +30,7 @@
                 <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
               </div>
             </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-dark rounded-circle">
-                  <i class="mdi mdi-onepassword  text-info"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
-              </div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-dark rounded-circle">
-                  <i class="mdi mdi-calendar-today text-success"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
-              </div>
-            </a>
+          
           </div>
         </div>
       </li>
@@ -62,7 +41,7 @@
 
       {{-- DASHBOARD --}}
       <li class="nav-item menu-items">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/home">
           <span class="menu-icon">
             <i class="mdi mdi-view-carousel"></i>
           </span>
@@ -72,7 +51,7 @@
 
       {{-- POSTS --}}
       <li class="nav-item menu-items">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/home">
           <span class="menu-icon">
             <i class="mdi mdi-panorama-horizontal"></i>
           </span>
@@ -91,7 +70,7 @@
 
       {{-- FRIENDS --}}
       <li class="nav-item menu-items">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/home">
           <span class="menu-icon">
             <i class="mdi mdi-account"></i>
           </span>
@@ -100,7 +79,7 @@
       </li>
 
       <li class="nav-item menu-items">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/home">
           <span class="menu-icon">
             <i class=" mdi mdi-calendar-text "></i>
           </span>
@@ -121,7 +100,23 @@
         </a>
         <div class="collapse" id="auth">
           <ul class="nav flex-column sub-menu"> 
-            <li class="nav-item"> <a class="nav-link" href="/index">Logout</a></li>
+
+
+            
+
+
+            <li class="nav-item"> 
+              <a class="nav-link" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+
+            </li>
           </ul>
         </div>
       </li>

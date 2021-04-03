@@ -13,8 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <div class="d-flex justify-content-center">
+                        <p class="my-3">You are logged in!</p>
+                        <a class="mx-5 my-2" href="/story">
+                            <button type="button" class="btn btn-dark " style="color: #007bff;" >Let's Go!</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
