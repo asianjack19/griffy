@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use Carbon\Carbon;
-use Illuminate\Support\Carbon as IlluminateCarbon;
+use App\Post;
+use App\Like;
+
 
 class PostsController extends Controller
 {
@@ -28,8 +30,8 @@ class PostsController extends Controller
             'title' => $request["title"],
             'body' => $request["body"],
             'userID' => $request->userID,
-            'created_at'=>Carbon\Carbon::now()
-            
+            'created_at'=>Carbon::now(),
+            'updated_at'=>Carbon::now()
         ]);
         return redirect('/story');
     }
@@ -39,9 +41,10 @@ class PostsController extends Controller
       
         $story = DB::table('posts')
                 ->join('users', 'users.userID','=','posts.userID')
+                ->orderBy('posts.created_at','desc')
                 ->get();
         
-        $sorted = $story->sortByDesc('postID');
+        $sorted = $story;
         
         return view('items.posts.story.index', compact('sorted'));
     }
