@@ -34,14 +34,15 @@ class PostsController extends Controller
 
     public function indexStory()
     {
+      
         $story = DB::table('posts')
                 ->join('users', 'users.userID','=','posts.userID')
                 ->get();
         
-        
+        $shuffled= $story->shuffle();
 
         // dd($stories);
         
-        return view('items.posts.story.index', compact('story'));
+        return view('items.posts.story.index', compact('shuffled'));
     }
 }

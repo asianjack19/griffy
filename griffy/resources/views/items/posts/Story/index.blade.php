@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="mx-auto w-50 mh-70">
-        @forelse ( $story as $key =>$story )
+      
+        @forelse ( $shuffled as $key =>$story )
          <div class="card mw-100" >
             <div class="card-body ">
               <h5 class="card-title text-center" style="font-size: 30px">{{$story -> title}}</h5>
