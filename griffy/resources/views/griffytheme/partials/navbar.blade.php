@@ -14,7 +14,7 @@
         </li>
       </ul>
       <ul class="navbar-nav navbar-nav-right">
-        <li class="nav-item dropdown d-none d-lg-block">
+        <li class="nav-item dropdown">
           <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false">+ Create New Post</a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
             
@@ -61,7 +61,8 @@
           </div>
         </li>
         
-        <li class="nav-item dropdown border-left">
+        {{-- Messages --}}
+        {{-- <li class="nav-item dropdown border-left">
           <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
             <i class="mdi mdi-email"></i>
             <span class="count bg-success"></span>
@@ -101,8 +102,10 @@
             <div class="dropdown-divider"></div>
             <p class="p-3 mb-0 text-center">4 new messages</p>
           </div>
-        </li>
-        <li class="nav-item dropdown border-left">
+        </li> --}}
+
+        {{-- Notifications --}}
+        {{-- <li class="nav-item dropdown border-left">
           <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
             <i class="mdi mdi-bell"></i>
             <span class="count bg-danger"></span>
@@ -148,7 +151,9 @@
             <div class="dropdown-divider"></div>
             <p class="p-3 mb-0 text-center">See all notifications</p>
           </div>
-        </li>
+        </li> --}}
+
+        
         <li class="nav-item dropdown">
           <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
             <div class="navbar-profile">
@@ -158,9 +163,10 @@
             </div>
           </a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
-            <h6 class="p-3 mb-0">Profile</h6>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item preview-item">
+            {{-- <h6 class="p-3 mb-0">Account</h6>
+            <div class="dropdown-divider"></div> --}}
+
+            {{-- <a class="dropdown-item preview-item">
               <div class="preview-thumbnail">
                 <div class="preview-icon bg-dark rounded-circle">
                   <i class="mdi mdi-settings text-success"></i>
@@ -169,7 +175,8 @@
               <div class="preview-item-content">
                 <p class="preview-subject mb-1">Settings</p>
               </div>
-            </a>
+            </a> --}}
+
             <div class="dropdown-divider"></div>
             <a class="dropdown-item preview-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();

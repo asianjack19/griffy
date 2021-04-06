@@ -3,14 +3,14 @@
 @section('content')
     <div class="mx-auto w-50 mh-70">
       
-        @forelse ( $shuffled as $key =>$story )
+        @forelse ( $sorted as $key =>$story )
          <div class="card mw-100" >
             <div class="card-body ">
               <h5 class="card-title text-center" style="font-size: 30px">{{$story -> title}}</h5>
-              <div class="d-flex align-items-center border-bottom border-success">
+              <span class="d-flex align-items-center border-bottom border-top border-info">
                 <img class="img-xs rounded-circle " src="{{ asset('assets/images/faces/RealPeople/Rick.jpg') }}" alt="">
-                <h4 class="text-center mx-3 my-4" style="color: #007bff;">{{$story->userName}}</h4>
-              </div>
+                <h5 class="text-center mx-3 my-4" style="color: #5a4ae3"  >{{$story->userName}}</h5>
+              </span>
               
               
               <p class="card-text my-5">{{$story -> body}}</p>

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
-
+use Carbon\Carbon;
+use Illuminate\Support\Carbon as IlluminateCarbon;
 
 class PostsController extends Controller
 {
@@ -21,13 +22,14 @@ class PostsController extends Controller
         
         $request->validate([
             'title' => 'required',
-            'title' => 'required'
         ]);
 
         $request = DB::table('posts')->insert([
             'title' => $request["title"],
             'body' => $request["body"],
-            'userID' => $request->userID
+            'userID' => $request->userID,
+            'created_at'=>Carbon\Carbon::now()
+            
         ]);
         return redirect('/story');
     }
@@ -39,10 +41,8 @@ class PostsController extends Controller
                 ->join('users', 'users.userID','=','posts.userID')
                 ->get();
         
-        $shuffled= $story->shuffle();
-
-        // dd($stories);
+        $sorted = $story->sortByDesc('postID');
         
-        return view('items.posts.story.index', compact('shuffled'));
+        return view('items.posts.story.index', compact('sorted'));
     }
 }

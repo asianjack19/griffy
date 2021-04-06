@@ -81,7 +81,7 @@
       <li class="nav-item menu-items">
         <a class="nav-link" href="/home">
           <span class="menu-icon">
-            <i class=" mdi mdi-calendar-text "></i>
+            <i class=" mdi mdi-calendar-text text-success"></i>
           </span>
           <span class="menu-title">Events</span>
         </a>
@@ -90,7 +90,7 @@
       
       
       
-      <li class="nav-item menu-items">
+      {{-- <li class="nav-item menu-items">
         <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
           <span class="menu-icon">
             <i class="mdi mdi-security"></i>
@@ -119,7 +119,7 @@
             </li>
           </ul>
         </div>
-      </li>
+      </li> --}}
       
     </ul>
   </nav>
