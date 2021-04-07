@@ -35,10 +35,7 @@ class User extends Authenticatable
      * @var array
      */
 
-     public function likes()
-     {
-         $this->belongsTo('App\Like');
-     }
+     
      public function post()
      {
          $this->belongsTo('App\Post');
