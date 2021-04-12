@@ -10,7 +10,6 @@
     <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" sizes="64x64" />
   </head>
   <body>
-
     <div class="container-scroller">
 
       <!-- SIDEBAR -->

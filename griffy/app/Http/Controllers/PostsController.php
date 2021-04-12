@@ -41,6 +41,8 @@ class PostsController extends Controller
       
         $story = DB::table('posts')
                 ->join('users', 'users.userID','=','posts.userID')
+                ->join('universities', 'universities.universityID','=','users.universityID')
+                ->join('majors', 'majors.majorID','=','users.userID')
                 ->orderBy('posts.created_at','desc')
                 ->get();
         

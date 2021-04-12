@@ -17,7 +17,6 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('postID');
             $table->string('title');
             $table->longText('body');
-            $table->integer('likeCount')->nullable()->default(0);
             $table->unsignedBigInteger('userID');
             $table->foreign('userID')->references('userID')->on('users');
             $table->string('media')->nullable();    

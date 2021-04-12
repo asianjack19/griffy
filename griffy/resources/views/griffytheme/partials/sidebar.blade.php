@@ -15,7 +15,7 @@
             </div>
             <div class="profile-name">
               <h5 class="mb-0 font-weight-normal">{{ Auth::user()->userName }}</h5>
-              <span>BINUS University</span>
+              <span>$contact->universityName</span>
             </div>
           </div>
           <a href="/home" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
