@@ -25,7 +25,7 @@
 </head>
 <body style="background-color: #2A3038 !important">
     <div id="app">
-        <nav class="navbar navbar-expand-md shadow-sm" style="left: 0 !important">
+        <nav class="navbar navbar-expand-md shadow-sm" style="left: 0 !important; max-height:75px !important">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <a class="sidebar-brand brand-logo" href="/"><img src=" {{ asset('assets/images/griffy-logo.svg') }}" style="width:12% !important " alt="logo" /></a>

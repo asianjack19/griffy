@@ -7,7 +7,7 @@ use DB;
 use Auth;
 use Carbon\Carbon;
 use App\Post;
-use App\Like;
+
 
 
 class PostsController extends Controller
@@ -42,12 +42,10 @@ class PostsController extends Controller
         $story = DB::table('posts')
                 ->join('users', 'users.userID','=','posts.userID')
                 ->join('universities', 'universities.universityID','=','users.universityID')
-                ->join('majors', 'majors.majorID','=','users.userID')
+                ->join('majors', 'majors.majorID','=','users.majorID')
                 ->orderBy('posts.created_at','desc')
                 ->get();
-        
         $sorted = $story;
-        
         return view('items.posts.story.index', compact('sorted'));
     }
 }

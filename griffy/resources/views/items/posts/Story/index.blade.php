@@ -6,7 +6,7 @@
         @forelse ( $sorted as $key =>$story )
          <div class="card mw-100" style="border-radius: 12px" >
             <div class="card-body ">
-              <h5 class="card-title text-center" style="font-size: 30px">{{$story -> title}}</h5>
+              <h5 class="card-title text-center" style="font-size: 30px">{{$story ->title}}</h5>
               <span class="d-flex align-items-center  rounded-pill " style="background-color: #2a3038; align-items: center">
                 <img class="img-xs rounded-circle " style="margin-left: 10px" src="{{ asset('assets/images/faces/RealPeople/Rick.jpg') }}" alt="">
                 <h5 class="text-center mx-3 my-4" style="color: #5a4ae3"  >{{$story->userName}}</h5>
@@ -15,7 +15,7 @@
                   @if ($story->studyStatus == "Active Student")
                     <p style="margin-left:0.5rem !important; font-size: 15px">Status: <span class="text-success ml-1">{{$story->studyStatus}}</span></p>
                   @else
-                    <p style="margin-left:0.5rem !important; font-size: 15px">Status:<span class="text-danger ml-1"> {{$story->studyStatus}}</span></p>
+                    <p style="margin-left:0.75rem !important; font-size: 15px">Status:<span class="text-danger ml-1"> {{$story->studyStatus}}</span></p>
                   @endif
                 </div>
               </span>
@@ -33,12 +33,12 @@
               </div>
             </div>
           </div>
-            @empty
+          @empty
             <div class="align-middle my-2">
                 <h5 class="card-title text-center" style="font-size: 30px">No Stories!</h5>
                 <h5 class="card-title text-center" style="font-size: 10px">(yet)<h1 class="text-center">&#x1F610;</h1></h5>
             </div>
-            
+       
         @endforelse
         
         

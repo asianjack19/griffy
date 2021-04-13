@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="border-radius: 12px !important">
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
@@ -16,7 +16,7 @@
                     <div class="d-flex justify-content-between">
                         <p class="my-3">You are logged in!</p>
                         <a class="mx-5 my-3" href="/story">
-                            <button type="button" class="btn btn-dark " style="color: #007bff;" >Let's Go!</button>
+                            <button type="button" class="btn btn-dark  rounded-pill " style="color: #007bff;" >Let's Go!</button>
                         </a>
                     </div>
                 </div>
