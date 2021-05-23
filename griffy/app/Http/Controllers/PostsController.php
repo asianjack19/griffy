@@ -38,7 +38,6 @@ class PostsController extends Controller
 
     public function indexStory()
     {
-      
         $story = DB::table('posts')
                 ->join('users', 'users.userID','=','posts.userID')
                 ->join('universities', 'universities.universityID','=','users.universityID')
