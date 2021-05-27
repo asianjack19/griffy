@@ -15,7 +15,7 @@ class AddUniversitiesToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->unsignedBigInteger('universityID')->nullable();
+            $table->unsignedBigInteger('universityID')->nullable()->default(1);
             $table->foreign('universityID')->references('universityID')->on('universities');
         
         });

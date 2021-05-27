@@ -29,11 +29,9 @@
               {{$message}}
             </div>
           @enderror
-
         </div>
-
         <button type="submit" class="btn btn-primary mr-2">Submit</button>
-        <button class="btn btn-secondary">Cancel</button>
+        <a href="{{ route('home') }}"><button class="btn btn-secondary">Cancel</button></a>
       
       </form>
     </div>

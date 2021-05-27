@@ -15,7 +15,7 @@ class AddMajorsToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->unsignedBigInteger('majorID')->nullable();
+            $table->unsignedBigInteger('majorID')->nullable()->default(1);
             $table->foreign('majorID')->references('majorID')->on('majors');
         
         });

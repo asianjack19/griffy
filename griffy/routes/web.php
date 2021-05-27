@@ -28,3 +28,7 @@ Route::post('/story', 'PostsController@storeStory')->middleware('auth');
 
 //Show Story
 Route::get('/story', 'PostsController@indexStory')->middleware('auth');
+
+//React to Story
+Route::get('/story/{id}/react','PostsController@reactStory')->middleware('auth');
+Route::post('/story/{id}/react', 'PostsController@storeReactStory')->middleware('auth');
