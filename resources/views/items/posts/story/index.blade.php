@@ -22,13 +22,10 @@
               
               
               <p class="card-text my-5">{{$story -> body}}</p>
-              <div cla>
+              <div>
                 <div class="d-flex justify-content-between">
                   <a href="/story/{{$story->postID}}/react"><button class="btn btn-primary w-2 h-2 px-3 py-2" style="border-radius: 12px"><div class="mdi mdi-tag-faces"></div>React<br>to Post</button></a>
-                    <div class="d-flex align-items-center align-self-start my-1">
-                      {{-- <h3 class="ml-5">{{count($sorted->userID)}}</h3>
-                      <p class="text-success ml-2 mb-0 font-weight-medium">Likes</p> --}}
-                    </div>
+                  <a href="/story/{{$story->postID}}/reactlist"><button class="btn btn-primary w-2 h-2 px-3 py-2" style="border-radius: 12px"><div class="mdi mdi-tag-faces"></div>See Reactions</button></a>
                   </div>
               </div>
             </div>

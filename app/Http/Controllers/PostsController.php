@@ -75,5 +75,14 @@ class PostsController extends Controller
         return redirect('/story');
     }
 
-    // public 
+    public function viewReactStory($postID)
+    {
+        $reactionList = DB::table('reactions')
+                        -> join('posts', 'posts.postID','=','reactions.postID')
+                        ->where('reactions.postID', $postID)
+                        ->orderBy('reactions.created_at','desc')
+                        ->get();
+        
+        return view('items.posts.story.reactList', compact('reactionList'));
+    }
 }
