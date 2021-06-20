@@ -21,13 +21,7 @@ class PostsController extends Controller
     public function storeStory(Request $request)
     {
         $request->userID = Auth::user()->userID;
-        
-        if(empty($request->input("title") || $request->input("body") )){
-            return redirect('/story');
-        }
-
-        else
-        {
+      
             $request = DB::table('posts')->insert([
                 'title' => $request["title"],
                 'body' => $request["body"],
@@ -36,7 +30,7 @@ class PostsController extends Controller
                 'updated_at'=>Carbon::now()
             ]);
             return redirect('/story');
-        }
+        
 
     }
 
@@ -64,11 +58,6 @@ class PostsController extends Controller
     }
     public function storeReactStory(Request $request)
     {
-        
-        if(empty($request->input("reactionBody") )){
-            return redirect('/story');
-        }
-        
         $request = DB::table('reactions')->insert([
             'reactionBody' => $request['reactionBody'],
             'reactionType' => $request['reactionType'],

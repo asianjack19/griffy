@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card mx-auto w-50 mh-70" style="border-radius: 12px">
-    <div class="card-body ">
+    <div class="card-body forms-sample ">
       <h4 class="card-title text-center">Make Story</h4>
       
 
@@ -31,9 +31,11 @@
           @enderror
         </div>
         <button type="submit" class="btn btn-primary mr-2">Submit</button>
-        <a href="{{ route('home') }}"><button class="btn btn-secondary">Cancel</button></a>
-      
+        
       </form>
+      <div style="margin-top: 1rem">
+        <a href="{{ url()->previous()  }}"><button class="btn btn-secondary" >Cancel</button></a>
+      </div>
     </div>
   </div>
 @endsection

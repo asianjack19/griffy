@@ -37,9 +37,12 @@
         </div>
         <input type = "hidden" name = "postID" value ={{$story->postID}}>
         <button type="submit" class="btn btn-primary mr-2">Submit</button>
-        <a href="{{route('home')}}"><button class="btn btn-secondary">Cancel</button></a>
-      
+        
       </form>
+      <div style="margin-top: 1rem">
+
+        <a href="{{url()->previous()}}"><button class="btn btn-secondary">Cancel</button></a>
+      </div>
     </div>
   </div>
 @endsection
