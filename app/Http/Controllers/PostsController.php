@@ -22,18 +22,22 @@ class PostsController extends Controller
     {
         $request->userID = Auth::user()->userID;
         
-        $request->validate([
-            'title' => 'required',
-        ]);
+        if(empty($request->input("title") || $request->input("body") )){
+            return redirect('/story');
+        }
 
-        $request = DB::table('posts')->insert([
-            'title' => $request["title"],
-            'body' => $request["body"],
-            'userID' => $request->userID,
-            'created_at'=>Carbon::now(),
-            'updated_at'=>Carbon::now()
-        ]);
-        return redirect('/story');
+        else
+        {
+            $request = DB::table('posts')->insert([
+                'title' => $request["title"],
+                'body' => $request["body"],
+                'userID' => $request->userID,
+                'created_at'=>Carbon::now(),
+                'updated_at'=>Carbon::now()
+            ]);
+            return redirect('/story');
+        }
+
     }
 
     public function indexStory()
@@ -60,9 +64,10 @@ class PostsController extends Controller
     }
     public function storeReactStory(Request $request)
     {
-        $request->validate([
-            'reactionBody' => 'required',
-        ]);
+        
+        if(empty($request->input("reactionBody") )){
+            return redirect('/story');
+        }
         
         $request = DB::table('reactions')->insert([
             'reactionBody' => $request['reactionBody'],
@@ -71,7 +76,6 @@ class PostsController extends Controller
             'created_at'=>Carbon::now(),
             'updated_at'=>Carbon::now()
         ]);
-        //dd($request->all());
         return redirect('/story');
     }
 
